@@ -12,7 +12,8 @@ import java.util.Date;
  *
  * @author anderson.154517
  */
-public class Professor extends Pessoa{
+public class Professor extends Pessoa {
+
     private ArrayList<Disciplina> disciplina = new ArrayList<Disciplina>();
     private int cargaHoraria;
     private float valorHora;
@@ -22,12 +23,18 @@ public class Professor extends Pessoa{
         super(nome, rg, cpf, datanascimento, idade);
         this.cargaHoraria = cargaHoraria;
         this.valorHora = valorHora;
-        this.salario = calculaSalario (valorHora, cargaHoraria);
+        this.salario = calculaSalario(valorHora, cargaHoraria);
     }
-    public float calculaSalario(float valorHora, float cargaHoraria){
+
+    public Professor(int cargaHoraria, float valorHora, float salario, String nome, String rg, String cpf, int idade, Date dataNascimento) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public float calculaSalario(float valorHora, float cargaHoraria) {
         return valorHora * cargaHoraria;
     }
-     public ArrayList getDisciplinas() {
+
+    public ArrayList getDisciplinas() {
         return disciplina;
     }
 

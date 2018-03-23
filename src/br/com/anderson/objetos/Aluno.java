@@ -12,12 +12,12 @@ import java.util.Date;
  *
  * @author anderson.154517
  */
-public class Aluno extends Pessoa{
-    private int matricula;
-  private Date dataMatricula;
-  private ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>(); 
+public class Aluno extends Pessoa {
 
-  
+    private int matricula;
+    private Date dataMatricula;
+    private ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
     public Aluno(int matricula, Date dataMatricula, String nome, String rg, String cpf, Date datanascimento, int idade) {
         super(nome, rg, cpf, datanascimento, idade);
         this.matricula = matricula;
@@ -47,9 +47,9 @@ public class Aluno extends Pessoa{
     public void setDisciplina(ArrayList disciplina) {
         this.disciplinas = disciplina;
     }
-  
+
     @Override
     public String toString() {
-        return "Aluno{" + "matricula=" + matricula + ", dataMatricula=" + dataMatricula + ", disciplinas=" + disciplinas + '}';
+        return "Aluno: " + "\nMatrícula: " + matricula + "\nData de Matrícula: " + dataMatricula + "\nDisciplinas: " + disciplinas + '.';
     }
 }

@@ -10,6 +10,7 @@ package br.com.anderson.objetos;
  * @author anderson.154517
  */
 public class Disciplina {
+
     private String nome;
     private String departamento;
     private char status;
@@ -19,7 +20,6 @@ public class Disciplina {
         this.departamento = departamento;
         this.status = status;
     }
-    
 
     public String getNome() {
         return nome;
@@ -47,6 +47,6 @@ public class Disciplina {
 
     @Override
     public String toString() {
-        return "Disciplina{" + "nome=" + nome + ", departamento=" + departamento + ", status=" + status + '}';
+        return "Disciplina: " + "\nNome: " + nome + "\nDepartamento: " + departamento + "\nStatus: " + status + '.';
     }
 }

@@ -13,31 +13,32 @@ import java.util.Date;
  * @author anderson.154517
  */
 public abstract class Pessoa {
+
     private String nome;
     private String rg;
     private String cpf;
     private Date datanascimento;
     private int idade;
-public static int calculaIdade(java.util.Date dataNasc) {
 
-    Calendar dataNascimento = Calendar.getInstance();  
-    dataNascimento.setTime(dataNasc); 
-    Calendar hoje = Calendar.getInstance();  
+    public static int calculaIdade(java.util.Date dataNasc) {
 
-    int idade = hoje.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR); 
+        Calendar dataNascimento = Calendar.getInstance();
+        dataNascimento.setTime(dataNasc);
+        Calendar hoje = Calendar.getInstance();
 
-    if (hoje.get(Calendar.MONTH) < dataNascimento.get(Calendar.MONTH)) {
-      idade--;  
-    } 
-    else 
-    { 
-        if (hoje.get(Calendar.MONTH) == dataNascimento.get(Calendar.MONTH) && hoje.get(Calendar.DAY_OF_MONTH) < dataNascimento.get(Calendar.DAY_OF_MONTH)) {
-            idade--; 
+        int idade = hoje.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR);
+
+        if (hoje.get(Calendar.MONTH) < dataNascimento.get(Calendar.MONTH)) {
+            idade--;
+        } else {
+            if (hoje.get(Calendar.MONTH) == dataNascimento.get(Calendar.MONTH) && hoje.get(Calendar.DAY_OF_MONTH) < dataNascimento.get(Calendar.DAY_OF_MONTH)) {
+                idade--;
+            }
         }
+
+        return idade;
     }
 
-    return idade;
-}
     public Pessoa(String nome, String rg, String cpf, Date datanascimento, int idade) {
         this.nome = nome;
         this.rg = rg;
