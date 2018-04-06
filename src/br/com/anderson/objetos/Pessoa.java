@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public abstract class Pessoa {
 
-    private String nome;
+    String nome;
     private String rg;
     private String cpf;
     private Date datanascimento;

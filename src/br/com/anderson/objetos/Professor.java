@@ -26,10 +26,6 @@ public class Professor extends Pessoa {
         this.salario = calculaSalario(valorHora, cargaHoraria);
     }
 
-    public Professor(int cargaHoraria, float valorHora, float salario, String nome, String rg, String cpf, int idade, Date dataNascimento) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public float calculaSalario(float valorHora, float cargaHoraria) {
         return valorHora * cargaHoraria;
     }
@@ -68,6 +64,6 @@ public class Professor extends Pessoa {
 
     @Override
     public String toString() {
-        return "Professor{" + "disciplina=" + disciplina + ", cargaHoraria=" + cargaHoraria + ", valorHora=" + valorHora + ", salario=" + salario + '}';
+        return "\nProfessor: " +nome+ "\nDisciplina: " + disciplina + "\nCarga Horária: " + cargaHoraria + "\nValor da Hora: " + valorHora + "\nSalário: " + salario + '.';
     }
 }

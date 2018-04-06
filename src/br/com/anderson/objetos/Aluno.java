@@ -50,6 +50,6 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return "Aluno: " + "\nMatrícula: " + matricula + "\nData de Matrícula: " + dataMatricula + "\nDisciplinas: " + disciplinas + '.';
+        return "\nAluno: " + nome + "\nMatrícula: " + matricula + "\nData de Matrícula: " + dataMatricula + "\nDisciplinas: " + disciplinas + '.';
     }
 }

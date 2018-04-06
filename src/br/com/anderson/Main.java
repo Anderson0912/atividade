@@ -72,8 +72,8 @@ public class Main {
                         dataNascimento = conversor.parse(JOptionPane.showInputDialog("Informe a sua data de nascimento:"));
                         cargaHoraria = Integer.parseInt(JOptionPane.showInputDialog("Informe a sua carga horária:"));
                         valorHora = Float.parseFloat(JOptionPane.showInputDialog("Informe o valor da hora:"));
-
-                        prof.add(new Professor(cargaHoraria, valorHora, salario, nome, rg, cpf, idade, dataNascimento));
+                        
+                        prof.add(new Professor(cargaHoraria, valorHora, nome, rg, cpf, dataNascimento, idade));
 
                         if (JOptionPane.showConfirmDialog(null, "Professor já trabalha em alguma disciplina?") == 0) {
                             do {
